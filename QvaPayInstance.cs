@@ -90,7 +90,7 @@ namespace QvaPayDotnet
         ///         Transaction Object.
         ///     </returns>
         /// </summary>
-        public async Task<TransactionResponse> GetTransactions(string uuid, string resourcePath = "transaction/{0}?")
+        public async Task<TransactionResponse> GetTransaction(string uuid, string resourcePath = "transaction/{0}?")
         {
             var request = new RestRequest(resourcePath.Replace("{0}",uuid) + auth, Method.GET);
             request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json"; };

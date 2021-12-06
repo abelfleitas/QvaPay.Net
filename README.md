@@ -14,9 +14,10 @@ You can install this package by using Nuget:
 
 Register your account to process payments through **QvaPay** at [qvapay.com/register](https://qvapay.com/register).
 
-### Use
+### Usage
 ```dotnet 
     
+    //Configure the QvaPay object
 	var config = new QvaPayConfig()
     {
         apiversion = "v1",
@@ -24,11 +25,13 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
         appsecret = "Your App Secret",
     };
 
-    Instantiate the object.
+    //Instantiate the object.
     IQvaPayInstance qva = new QvaPayInstance(config);
 
+    //Get your application information.
     var result = await qva.AppInfo();
 
+    //Create an invoice
     var inv = new Invoice()
     {
         amount = new decimal(0.01),
@@ -38,11 +41,15 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     };
     var result = await qva.Invoice(inv);
 
+    //List transactions
     var result = await qva.Transactions();
 
+
+    //Get a particular transaction
     string uuid = "Your transaction id"
     var result = await qva.GetTransaction(uuid);
 
+    //Get your account balance
     decimal balance = await qva.Balance();
 
 ```

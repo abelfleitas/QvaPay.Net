@@ -42,7 +42,7 @@ namespace QvaPayDotnet.Contract
         ///         Transaction Object
         ///     </returns>
         /// </summary>
-        Task<TransactionResponse> GetTransactions(string uuid, string resourcePath = "transaction/{0}?");
+        Task<TransactionResponse> GetTransaction(string uuid, string resourcePath = "transaction/{0}?");
 
         /// <summary>
         ///     Get Balance
