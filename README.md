@@ -61,3 +61,11 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
 
 ```
 ## Note
+
+Once the payment of your transaction is confirmed, 
+QvaPay will notify the status through a webhook in your APP.
+It is done in GET format and has implicit as parameters,
+the remote_id defined at the time of the invoice generation
+and the QvaPay internal invoice id.
+It is recommended to place in the webhook address to be used,
+a keyword or unique token to avoid false calls to your endpoint.
