@@ -7,7 +7,7 @@ Non official, QvaPay library for the Microsoft.Net framework, **only for version
 You can install this package by using Nuget:
 
 ```bash
-    Install-Package QvaPay.Net -Version 1.0.0
+Install-Package QvaPay.Net -Version 1.0.0
 ```
 
 ### Sign up on **QvaPay**
@@ -60,3 +60,4 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     decimal balance = await qva.Balance();
 
 ```
+## Note
