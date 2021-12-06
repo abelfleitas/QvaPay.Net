@@ -18,8 +18,7 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
 ```C# 
     
     //Configure the QvaPay object
-	var config = new QvaPayConfig()
-    {
+	var config = new QvaPayConfig() {
         apiversion = "v1",
         appid = "Your App Id",
         appsecret = "Your App Secret",
