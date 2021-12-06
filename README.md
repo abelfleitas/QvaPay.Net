@@ -62,7 +62,7 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
 ```
 ## Note
 
-```p
+```
 Once the payment of your transaction is confirmed, 
 QvaPay will notify the status through a webhook in your APP.
 It is done in GET format and has implicit as parameters,
