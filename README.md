@@ -18,7 +18,9 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
 ```C# 
     
     //Configure the QvaPay object
-	var config = new QvaPayConfig() {
+
+	var config = new QvaPayConfig() 
+    {
         apiversion = "v1",
         appid = "Your App Id",
         appsecret = "Your App Secret",
@@ -31,13 +33,21 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     var result = await qva.AppInfo();
 
     //Create an invoice
+
+    Params
+    <b>amount<b/> //Amount of money to receive (in dollars and with 2 decimal places)
+    <b>description<b/> //Description of the invoice to be generated, useful to provide information to the payer. (No more than 300 characters)
+    <b>remote_id<b/> //Invoice ID in remote system (not required)
+    <b>signed<b/> //Generation of a signed URL or not (signed URLs expire after 30 minutes, providing more security or expiration)
+
     var inv = new Invoice()
     {
         amount = new decimal(0.01),
         description = "Test product",
         remote_id = Guid.NewGuid().ToString(),
-        signed = true
+        signed = true 
     };
+
     var result = await qva.Invoice(inv);
 
     //List transactions
