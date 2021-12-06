@@ -19,7 +19,7 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     
     //Configure the QvaPay object
 
-	var config = new QvaPayConfig() 
+    var config = new QvaPayConfig() 
     {
         apiversion = "v1",
         appid = "Your App Id",
@@ -35,9 +35,11 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     //Create an invoice
     Params
     # amount //Amount of money to receive (in dollars and with 2 decimal places)
-    # description //Description of the invoice to be generated, useful to provide information to the payer. (No more than 300 characters)
+    # description //Description of the invoice to be generated, useful to provide
+    //information to the payer. (No more than 300 characters)
     # remote_id //Invoice ID in remote system (not required)
-    # signed //Generation of a signed URL or not (signed URLs expire after 30 minutes, providing more security or expiration)
+    # signed //Generation of a signed URL or not (signed URLs expire after 30 minutes,
+    //providing more security or expiration)
     var inv = new Invoice()
     {
         amount = new decimal(0.01),
