@@ -15,7 +15,7 @@ You can install this package by using Nuget:
 Register your account to process payments through **QvaPay** at [qvapay.com/register](https://qvapay.com/register).
 
 ### Usage
-```dotnet 
+```C# 
     
     //Configure the QvaPay object
 	var config = new QvaPayConfig()
