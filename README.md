@@ -33,13 +33,11 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
     var result = await qva.AppInfo();
 
     //Create an invoice
-
     Params
     # amount //Amount of money to receive (in dollars and with 2 decimal places)
     # description //Description of the invoice to be generated, useful to provide information to the payer. (No more than 300 characters)
     # remote_id //Invoice ID in remote system (not required)
     # signed //Generation of a signed URL or not (signed URLs expire after 30 minutes, providing more security or expiration)
-
     var inv = new Invoice()
     {
         amount = new decimal(0.01),
@@ -47,7 +45,6 @@ Register your account to process payments through **QvaPay** at [qvapay.com/regi
         remote_id = Guid.NewGuid().ToString(),
         signed = true 
     };
-
     var result = await qva.Invoice(inv);
 
     //List transactions
